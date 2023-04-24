@@ -1,0 +1,6 @@
+{
+    "require": {
+        "openai-php/client": "^0.4.2",
+        "orhanerday/open-ai": "^4.7"
+    }
+}
