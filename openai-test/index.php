@@ -5,9 +5,7 @@ require 'src/OpenAi.php';
 require 'src/Url.php';
 use Orhanerday\OpenAi\OpenAi;
 
-$open_ai = new OpenAi('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');
-//$prompt = $_GET['prompt'];
-
+$open_ai = new OpenAi('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');
 
 //$client = OpenAI::client('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');
 
@@ -31,14 +29,22 @@ $complete = $open_ai->completion(
 , function($curl_info, $data){
     // response
 	echo $data;
-	//$decoded = json_decode($data,true);
-	//echo $decoded;
+	$obj = json_decode($data,true);
+	echo $obj["id"];
+    echo $obj["object"];
 	//echo PHP_EOL;
 	//ob_flush();
 	//flush();
 	//return strlen($data);
 
 });
+
+if (isset($_POST['submit'])) {
+    //$prompt = $_POST['data'];
+    
+    //$response = generate_response($prompt);
+    
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,7 +54,10 @@ $complete = $open_ai->completion(
 	<body>
 		<h2>Tittel: Klovner på Svalbard: En fargerik og kulturell undervisningsartikkel</h2>
 		<p><?php echo $prompt; ?></p>
-		<button id="summaryButton">Show the summary</button>
+		<form method="post" action="">
+			<input type="button" name="summary" value="Summary">
+    	</form>
+
 	</body>
 </html>
 
