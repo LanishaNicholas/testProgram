@@ -4,7 +4,7 @@ namespace Orhanerday\OpenAi;
 
 class Url
 {
-    public const ORIGIN = 'https://platform.openai.com/docs/guides/chat';
+    public const ORIGIN = 'https://api.openai.com';
     public const API_VERSION = 'v1';
     public const OPEN_AI_URL = self::ORIGIN . "/" . self::API_VERSION;
 
