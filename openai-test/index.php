@@ -5,7 +5,7 @@ require 'src/OpenAi.php';
 require 'src/Url.php';
 use Orhanerday\OpenAi\OpenAi;
 
-$open_ai = new OpenAi('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');
+$open_ai = new OpenAi('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');
 
 //$client = OpenAI::client('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');
 
